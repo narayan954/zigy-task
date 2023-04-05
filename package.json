@@ -1,0 +1,14 @@
+{
+  "name": "zigy-task",
+  "version": "1.0.0",
+  "description": "server to upload a video and stream it and download it",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "narayan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
