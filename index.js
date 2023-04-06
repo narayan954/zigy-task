@@ -72,6 +72,17 @@ app.get("/stream/:filename", (req, res) => {
   }
 });
 
+// Route to handle file download
+app.get("/download/:filename", (req, res) => {
+  const filename = req.params.filename;
+  const path = `./uploads/${filename}`;
+  res.download(path, (err) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send("Error downloading file");
+    }
+  });
+});
 
 // Create base route
 app.get("/", (req, res) => {
